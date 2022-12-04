@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.736c7701.chunk.css",
+    "main.js": "/static/js/main.7ab68ab6.chunk.js",
+    "main.js.map": "/static/js/main.7ab68ab6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.765256f3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.765256f3.js.map",
+    "static/js/2.7d08579d.chunk.js": "/static/js/2.7d08579d.chunk.js",
+    "static/js/2.7d08579d.chunk.js.map": "/static/js/2.7d08579d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.736c7701.chunk.css.map": "/static/css/main.736c7701.chunk.css.map",
+    "static/js/2.7d08579d.chunk.js.LICENSE.txt": "/static/js/2.7d08579d.chunk.js.LICENSE.txt",
+    "static/media/brand_alt.97b580ad.png": "/static/media/brand_alt.97b580ad.png",
+    "static/media/brand_large.b1566479.png": "/static/media/brand_large.b1566479.png",
+    "static/media/flash.fc041b6e.png": "/static/media/flash.fc041b6e.png",
+    "static/media/growing.04e8f4c5.gif": "/static/media/growing.04e8f4c5.gif",
+    "static/media/growing_alt.ecc26665.gif": "/static/media/growing_alt.ecc26665.gif",
+    "static/media/knife.fc511593.png": "/static/media/knife.fc511593.png",
+    "static/media/knife_deseed.9439b8b7.gif": "/static/media/knife_deseed.9439b8b7.gif",
+    "static/media/overlap.e28a25e9.png": "/static/media/overlap.e28a25e9.png",
+    "static/media/plant.c151be0c.png": "/static/media/plant.c151be0c.png",
+    "static/media/rules.c3649525.gif": "/static/media/rules.c3649525.gif",
+    "static/media/watering.3ae2843d.gif": "/static/media/watering.3ae2843d.gif",
+    "static/media/wizard.404fe37d.png": "/static/media/wizard.404fe37d.png",
+    "static/media/wizard.b9849dda.gif": "/static/media/wizard.b9849dda.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.765256f3.js",
+    "static/js/2.7d08579d.chunk.js",
+    "static/css/main.736c7701.chunk.css",
+    "static/js/main.7ab68ab6.chunk.js"
+  ]
+}
