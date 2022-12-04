@@ -1,0 +1,24 @@
+{
+  "name": "indexer",
+  "version": "1.0.0",
+  "description": "Indexer for Box DeFi farm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Anshu Jalan",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/signalr": "^6.0.0",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

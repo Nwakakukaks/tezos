@@ -1,0 +1,1 @@
+{"version":3,"file":"UnknownBeaconError.js","sourceRoot":"","sources":["../../../src/errors/UnknownBeaconError.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;AAAA,wBAAiD;AAEjD;;GAEG;AACH;IAAwC,sCAAW;IAIjD;QAAA,YACE,kBACE,mBAAe,CAAC,aAAa,EAC7B,yEAAyE,CAC1E,SACF;QARM,UAAI,GAAW,oBAAoB,CAAA;QACnC,WAAK,GAAW,OAAO,CAAA;;IAO9B,CAAC;IACH,yBAAC;AAAD,CAAC,AAVD,CAAwC,eAAW,GAUlD;AAVY,gDAAkB"}

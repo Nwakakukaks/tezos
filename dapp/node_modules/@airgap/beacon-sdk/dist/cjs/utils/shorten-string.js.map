@@ -1,0 +1,1 @@
+{"version":3,"file":"shorten-string.js","sourceRoot":"","sources":["../../../src/utils/shorten-string.ts"],"names":[],"mappings":";;;AAAa,QAAA,aAAa,GAAG,UAAC,IAAY;IACxC,IAAI,IAAI,CAAC,MAAM,IAAI,EAAE,EAAE;QACrB,OAAU,IAAI,CAAC,MAAM,CAAC,CAAC,EAAE,CAAC,CAAC,WAAM,IAAI,CAAC,MAAM,CAAC,CAAC,CAAC,CAAG,CAAA;KACnD;IAED,OAAO,IAAI,CAAA;AACb,CAAC,CAAA"}

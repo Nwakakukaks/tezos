@@ -1,0 +1,158 @@
+"use strict";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Logger = void 0;
+var debug_1 = require("../debug");
+// Code taken from https://www.bennadel.com/blog/3941-styling-console-log-output-formatting-with-css.htm
+// const echo = (() => {
+//   let queue: any[] = []
+//   const ECHO_TOKEN = {}
+//   const RESET_INPUT = '%c '
+//   const RESET_CSS = ''
+//   // Attach formatting utility method.
+//   function alertFormatting(value: any): any {
+//     queue.push({
+//       value: value,
+//       css:
+//         'display: inline-block ; background-color: #e0005a ; color: #ffffff ; font-weight: bold ; padding: 3px 7px 3px 7px ; border-radius: 3px 3px 3px 3px ;'
+//     })
+//     return ECHO_TOKEN
+//   }
+//   // Attach formatting utility method.
+//   function warningFormatting(value: any): any {
+//     queue.push({
+//       value: value,
+//       css:
+//         'display: inline-block ; background-color: gold ; color: black ; font-weight: bold ; padding: 3px 7px 3px 7px ; border-radius: 3px 3px 3px 3px ;'
+//     })
+//     return ECHO_TOKEN
+//   }
+//   // I provide an echo-based proxy to the given Console Function. This uses an
+//   // internal queue to aggregate values before calling the given Console
+//   // Function with the desired formatting.
+//   function using(consoleFunction: any): any {
+//     function consoleFunctionProxy() {
+//       // As we loop over the arguments, we're going to aggregate a set of
+//       // inputs and modifiers. The Inputs will ultimately be collapsed down
+//       // into a single string that acts as the first console.log parameter
+//       // while the modifiers are then SPREAD into console.log as 2...N.
+//       // --
+//       // NOTE: After each input/modifier pair, I'm adding a RESET pairing.
+//       // This implicitly resets the CSS after every formatted pairing.
+//       var inputs = []
+//       var modifiers = []
+//       for (var i = 0; i < arguments.length; i++) {
+//         // When the formatting utility methods are called, they return
+//         // a special token. This indicates that we should pull the
+//         // corresponding value out of the QUEUE instead of trying to
+//         // output the given argument directly.
+//         if (arguments[i] === ECHO_TOKEN) {
+//           var item = queue.shift()
+//           inputs.push('%c' + item.value, RESET_INPUT)
+//           modifiers.push(item.css, RESET_CSS)
+//           // For every other argument type, output the value directly.
+//         } else {
+//           var arg = arguments[i]
+//           if (typeof arg === 'object' || typeof arg === 'function') {
+//             inputs.push('%o', RESET_INPUT)
+//             modifiers.push(arg, RESET_CSS)
+//           } else {
+//             inputs.push('%c' + arg, RESET_INPUT)
+//             modifiers.push(RESET_CSS, RESET_CSS)
+//           }
+//         }
+//       }
+//       consoleFunction(inputs.join(''), ...modifiers)
+//       // Once we output the aggregated value, reset the queue. This should have
+//       // already been emptied by the .shift() calls; but the explicit reset
+//       // here acts as both a marker of intention as well as a fail-safe.
+//       queue = []
+//     }
+//     return consoleFunctionProxy
+//   }
+//   return {
+//     // Console(ish) functions.
+//     log: using(console.log),
+//     warn: using(console.warn),
+//     error: using(console.error),
+//     trace: using(console.trace),
+//     group: using(console.group),
+//     groupEnd: using(console.groupEnd),
+//     // Formatting functions.
+//     asAlert: alertFormatting,
+//     asWarning: warningFormatting
+//   }
+// })()
+/**
+ * The logger that is used internally
+ */
+var Logger = /** @class */ (function () {
+    function Logger(service) {
+        this.name = service;
+    }
+    Logger.prototype.debug = function (method) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        this._log('debug', method, args);
+    };
+    Logger.prototype.log = function (method) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        this._log('log', method, args);
+    };
+    Logger.prototype.warn = function (method) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        this._log('warn', method, args);
+    };
+    Logger.prototype.error = function (method) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        this._log('error', method, args);
+    };
+    Logger.prototype._log = function (type, method, args) {
+        if (args === void 0) { args = []; }
+        if (!debug_1.getDebugEnabled()) {
+            return;
+        }
+        var groupText = "[BEACON] " + new Date().toISOString() + " [" + this.name + "](" + method + ")";
+        var data = args;
+        if (args[0] && typeof args[0] === 'string') {
+            groupText += " " + args[0];
+            data = args.slice(1);
+        }
+        switch (type) {
+            case 'error':
+                console.group(groupText);
+                console.error.apply(console, data);
+                break;
+            case 'warn':
+                console.group(groupText);
+                console.warn.apply(console, data);
+                break;
+            case 'debug':
+                console.groupCollapsed(groupText);
+                console.debug.apply(console, data);
+                break;
+            default:
+                console.group(groupText);
+                console.log.apply(console, data);
+        }
+        console.groupEnd();
+        // echo.group(echo.asWarning(`[BEACON] ${message}`))
+        // echo.log(echo.asWarning(`[${this.name}]`), echo.asAlert(`(${method})`), ...args)
+        // echo.groupEnd()
+    };
+    return Logger;
+}());
+exports.Logger = Logger;
+//# sourceMappingURL=Logger.js.map
