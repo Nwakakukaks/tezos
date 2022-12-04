@@ -1,6 +1,6 @@
 # Box Defi
 
-[Box Defi](https://box-defi.vercel.app) presents Defi farming the gamified way on Tezos blockchain. It aligns incentives and the fun of gamification using a combination of concepts like liquidity pools, semi-fungible tokens and flash loans with a low risk playing model.
+Box Defi presents Defi farming the gamified way on Tezos blockchain. It aligns incentives and the fun of gamification using a combination of concepts like liquidity pools, semi-fungible tokens and flash loans with a low risk playing model.
 
 ## Features
 
@@ -11,7 +11,6 @@
 - 🧙 **Fruit Wizard -** Fruit wizards can turn a combination of less rare fruits into more rarer ones. The original set of less rare FRUIT tokens are burnt and the newly generated rare FRUIT is given to the player.
 - ⚡️ **Flash Loans -** The Box Pool exposes a flash loan system that can be used to retrieve loans in kUSD that can be returned with a 1% fee in the same block.
 
-**NOTE:** Other relevant instructions regarding the gameplay are listed on the website [box-defi.vercel.app](https://box-defi.vercel.app)
 
 ## Crypto-Economics
 
@@ -32,8 +31,7 @@ The burnt FRUIT tokens ensure that the underlying SEED cannot be retrieved, thus
 
 ## Relevent Links
 
-- Demo Video: https://vimeo.com/735877985
-- Website: https://box-defi.vercel.app
+- Demo Video: https://youtu.be/dGQOAYojYlc
 
 ## Deployed Contracts
 
